@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO Y LISTA</title>
+    <link rel="stylesheet" href="../css/CONTACTO.css">
+</head>
+<body>
+    <header>
+        <img src="../img/incap.png" alt="" width="100" height="100">
+        <h1>LISTAS Y FORMULARIOS</h1>
+        <h2>MENU</h2> 
+    </header>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Productos</li>
+            <li>Tienda on line</li>
+            <li>Contacto</li>
+        </ul>
+    </nav>
+    <section>
+        <form action="datos.php" method="post">
+        <fieldset>
+            <!-- seccion ingreso nombre  -->
+            <label for="">Nombre Completo</label>
+            <input type="text" name="nombre" placeholder="&#9756;Ingrese su nombre completo" required><br><br>
+            <!-- Seccion Email -->
+            <label>E-mail</label>
+            <input name="email" type="email" placeholder="Ingrese su contraseña" required="">
+            <br><br>
+
+            <!-- seccion contraseña -->
+            <label>Contraseña</label>
+            <input name="contraseña" type="password" placeholder="Ingrese su contraseña"required="">
+            <br><br>
+            <!-- Seccion de Hobbies -->
+            <label>selecciona tus hobbies</label>
+            <br>
+            <input name="cine" type="checkbox">cine <br>
+            <input name="lectura" type="checkbox">lectura <br>
+            <input name="Deporte" type="checkbox">Deporte <br>
+            <br>
+            <br>
+            
+            <!-- Estado Civil -->
+
+            <label>Estado Civil</label><br>
+            <input name="estcivil" type="radio" value="casado">casado(a)<br>
+            <input name="estcivil" type="radio" value="soltero">soltero(a)<br>
+            <input name="estcivil" type="radio" value="viudo"> viudo(a)<br>
+            <br>
+            <br>
+
+            <!-- Seleccionar opcion lista  -->
+            <label> Programas tecnicos</label>
+            <select name="select">
+                <option>Selecciona un Programa...</option>
+                <option>Sistemas</option>
+                <option>Diseño grafico</option>
+                <option>contabilidad</option>
+                </select>
+                <br>
+                <br>
+                <label>Tu comentario:</label><br>
+                <textarea name="mensajer" rows="5" cols="40"></textarea>
+        </fieldset>
+        <br><br>
+        <!-- seccion de botones formulario submit: enviar datos cancel: borrar datos ingresados -->
+        <button type="submit">Enviar</button>
+        <button type="reset">Cancerlar</button>
+        <br>
+        <br>
+    </form>
+    </section>
+<!-- seccion de pie de pagina -->
+<footer>
+    Derechos reservados &copy;2023&#64;Cristian Stiven Ruiz Rodriguez
+</footer>
+</body>
+</html>
