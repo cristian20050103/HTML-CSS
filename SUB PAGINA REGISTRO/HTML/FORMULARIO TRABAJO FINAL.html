@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO Y LISTA</title>
+    <link rel="stylesheet" href="../CSS/CSS TRABAJO FINAL.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="icon" href="../IMAGENES/logo miniautura.jpg">
+
+</head>
+<body>
+    <header>
+        <img src="../IMAGENES/logo miniautura.jpg" alt="" width="100" height="100">
+        <h1>EL IMPERIO DE LAS COMIDAS RAPIDAS</h1>
+    </header>
+    <nav>
+        <div class="nav_menu">
+            <ul class="nav_list">
+            <li class="fas fa-home"><a href="../../PAGINA PRINCIPAL/HTML/EL IMPERIO DE LAS COMIDAS RAPIDAS.html" class="nav_link active-link">INICIO</a></li>
+            <li class="fas fa-user-graduate"><a href="../../SUB PAGINA NOSOTROS/HTML/EL IMPERIO DE LAS COMIDAS RAPIDAS.html" class="nav_link active-link">NOSOTROS</a></li>
+            <li class="fas fa-user-graduate"><a href="../../SUB PAGINA MENU/HTML/EL IMPERIO DE LAS COMIDAS RAPIDAS.html" class="nav_link active-link">MENU</a></li>
+            <li class="fab fa-wpforms"><a href="../../SUB PAGINA REGISTRO/HTML/FORMULARIO TRABAJO FINAL.html" class="nav_link active-link">REGISTRARSE</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section>
+        <form action="datos.php" method="post">
+        <fieldset>
+            <!-- seccion ingreso nombre  -->
+            <label for="">Nombre Completo</label>
+            <input type="text" name="nombre" placeholder="&#9756;Ingrese su nombre completo" required><br><br>
+            <!-- Seccion Email -->
+            <label>E-mail</label>
+            <input name="email" type="email" placeholder="Ingrese su contraseña" required="">
+            <br><br>
+
+            <!-- seccion contraseña -->
+            <label>Contraseña</label>
+            <input name="contraseña" type="password" placeholder="Ingrese su contraseña"required="">
+            <br><br>
+            <!-- Seccion de Hobbies -->
+            <label>selecciona tus servicios</label>
+            <br>
+            <input name="cine" type="checkbox">PIZZA<br>
+            <input name="lectura" type="checkbox">HAMBURGUESA <br>
+            <input name="Deporte" type="checkbox">LASAGNA <br>
+            <input name="Deporte" type="checkbox">SALCHIPAPA <br>
+            <br>
+            <br>
+            
+            <!-- Estado Civil -->
+
+            <label>ESPERIENCIA</label><br>
+            <input name="estcivil" type="radio" value="casado">EXELENTE<br>
+            <input name="estcivil" type="radio" value="soltero">BUENA<br>
+            <input name="estcivil" type="radio" value="soltero">MALA<br>
+            <input name="estcivil" type="radio" value="viudo"> PESIMA<br>
+            <br>
+            <br>
+
+            <!-- Seleccionar opcion lista  -->
+            <label> ELIJA LA SEDE EN LA QUE TOMO NUESTROS SERVCIOS</label>
+            <select name="select">
+                <option>SEDE CENTRO</option>
+                <option>SEDE CHAPINERO</option>
+                <option>SEDE RICAURTE</option>
+                <option>SEDE ALAMOS</option>
+                <option>SEDE TUNJUELITO</option>
+                </select>
+                <br>
+                <br>
+                <label>Tu comentario:</label><br>
+                <textarea name="mensajer" rows="5" cols="40"></textarea>
+        </fieldset>
+        <br><br>
+        <!-- seccion de botones formulario submit: enviar datos cancel: borrar datos ingresados -->
+        <button type="submit">Enviar</button>
+        <button type="reset">Cancerlar</button>
+        <br>
+        <br>
+    </form>
+    </section>
+<!-- seccion de pie de pagina -->
+<footer>
+    Derechos reservados &copy;2023&#64;Cristian Stiven Ruiz Rodriguez
+</footer>
+</body>
+</html>
