@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Roboto+Slab:wght@500&display=swap');
+/* seccion de estilos CSS3 para la pagina web */
+body{
+    font-family: 'Alkatra', cursive;
+    background-color: rgba(255, 255, 255, 0.6); 
+    background-image: url(../IMAGENES/FONDOPRO2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode:darken ;
+}
+ /* seccion de estilos CSS3 para la cabecera pagina web */
+header{
+    background:rgba(49, 222, 228, 0.6);
+    border:2px solid blue;
+    border-radius: 20px 20px 10px 10px;
+    display: flex;
+    flex-direction: row;/*dirección horizontal o en fila*/
+    justify-content: center;/*alinea horizontalmente*/
+    align-items: center;/*alinea verticalmente*/
+    backdrop-filter: blur(5px);
+    grid-area: header;
+    }
+    header img{
+    padding: 15px;
+    }
+     /* seccion de estilos CSS3 para la barra de menu pagina web */
+    nav{
+        background-color: rgb(0, 255, 200);
+        border:2px solid green;
+        border-radius: 22px;
+        display: flex;
+        flex-direction:row;
+        justify-content:space-between; 
+        align-items: center; 
+        padding: 5px;
+        margin:5px;
+        grid-area: nav;
+    }
+    nav ul{
+        padding: 0 0;
+        margin: 0 1px;
+    }
+    nav ul li{
+        display: inline;
+        list-style: none;
+        margin: 0 5px;
+        font: bold 12px Verdana;
+    }
+    article{
+        width: 85%;
+    border: 1px solid black;
+    padding:10px 10px;
+    border-radius: 20px;
+    margin: 30px auto;
+    background:rgba(6, 245, 233, 0.008);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: article;
+    }
+  /* seccion de estilos CSS3 para seccion principal pagina web */   
+  section{
+    grid-area: main;
+  }
+    section, main{
+    width: 60%;
+    border: 1px solid black;
+    padding:10px 10px;
+    border-radius: 20px;
+    margin:10px auto;
+    background:rgba(12, 228, 217, 0.1);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: main;
+    }
+    #sidebar{
+        grid-area:sidebar;/* se asigna nombre al contenedor*/
+        border: 1px solid black;
+        padding: 10px 10px;
+        border-radius: 20px;
+        margin: 10px auto;
+        display: flex;
+        flex-direction: column;/*se define direccion en forma columna*/
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(49, 222, 228, 0.157);
+        backdrop-filter:blur(5px);
+    }
+    /* se define ancho y altura contenedor para ajustar a vista de dispositivo actual*/
+    iframe{
+        max-width: 100%;
+        height: auto;
+    }
+
+  /* seccion de estilos CSS3 para el pie de pagina de pagina web */  
+ footer{
+    border: 1px solid black;
+    padding: 10px 10px;
+    border-radius: 20px;
+    margin: 10px auto;
+     font-size:16px;
+     text-align: center;
+     background-color: rgba(248, 251, 251, 0.271);
+     color:rgb(14, 14, 14);
+     grid-area: footer;
+ }
+ /*colocar animacion a los iconos fontawesome de redes sociales*/
+#redes a i:hover{
+    transform: scale(1.5);/*aumenta el tamaño 1.5 al pasar mouse por encima*/
+}
+
+/* seccion CSS GRID DISEÑO WEB RESPONSIVE*/
+/* Se define estilos al contenedor grid en general vista PC*/
+#grid-container > * {
+   text-align: center;
+   box-shadow: 1px 1px 7px 0px rgba(0,0,0,0.75);
+   }
+   /* Se define estilos al contenedor grid en general vista PC a 3 COLUMNAS.*/
+#grid-container{
+    display:grid;
+    grid-gap:10px; 
+    grid-template: 
+    "header header header" 150px
+    "nav nav nav" 50px
+    "main main sidebar" 300px
+    "main main sidebar" 300px
+    "main main sidebar" 250px
+    "footer footer footer" 150px /
+    1000px 150px 300px; 
+}
+/*-----SECCION VISTA DE TABLETS   2 COLUMNAS------*/
+@media (max-width:1024px){
+    #grid-container{
+        grid-template: 
+        "header header" 170px
+        "nav main" 800px
+        "nav main"  700px
+        "sidebar sidebar" 650px
+        "footer footer" 100px /
+        250px 450px; 
+        font-size: 100%;/*Cambia el tamaño de la letra*/
+    }
+
+    #menu{
+        background-color: rgba(22, 233, 223, 0.11);
+        border-radius: 22px;
+        display: block;
+        padding: 45px;
+        margin:40px;
+        height: auto;
+        text-align: center;
+    }
+    #main{
+    display: flex;
+    flex-direction:column;/* cambia la forma de dirección de fila a col*/
+    justify-content: space-between;
+    align-items:center;
+    flex-wrap: wrap;/*se define el auto ajuste de ancho dispostivo pasa a sgte. linea*/
+    max-width:100%;
+    }
+}
+     /*----- SECCION VISTA DE CELULAR  UNA COLUMNA------*/
+@media (max-width:640px){
+    #grid-container{
+    grid-template: 
+    "header" 150px
+    "nav" 50px
+    "main" 1120px
+    "sidebar" 800px
+    "footer" 100px /
+    500px; 
+    font-size: 60%;
+    }
+}
+
+
+
+
+
+
+
